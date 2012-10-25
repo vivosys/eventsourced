@@ -44,13 +44,11 @@ initial senders using the actor's current <code>sender</code> reference.
        to the journal. Can also be used for detecting duplicates, in special cases.</p></dd><dt class="param">processorId</dt><dd class="cmt"><p>Id of the event processor that stored (and emitted) this message.</p></dd><dt class="param">ack</dt><dd class="cmt"><p>Whether or not an <i>acknowledgement</i> should be written to the journal during
        (or after) delivery of this message by a <a name="org.eligosource.eventsourced.core.Channel" class="extype" href="Channel.html">Channel</a>.
        Used by event processors to indicate a series of output messages (that are derived
-       from a single input message). In this case, output messages 1 to n-1 should have set
-       <code>ack</code> to <code>false</code> and only output message n should have set <code>ack</code> to <code>true</code> (default).
+       from a single input message). In this case, output messages 1 to n-1 should have <code>ack</code>
+       set to <code>false</code> and only output message n should have <code>ack</code> set to <code>true</code> (default).
        If an acknowledgement has been written for a series, all messages of that series will
        be ignored by the corresponding channel during a replay, otherwise all of them will
-       be delivered again. Refer to <a name="org.eligosource.eventsourced.core.DefaultChannel" class="extype" href="DefaultChannel.html">DefaultChannel</a>
-       and <a name="org.eligosource.eventsourced.core.ReliableChannel" class="extype" href="ReliableChannel.html">ReliableChannel</a> for details when they
-       write acknowledgements.
+       be delivered again.
 </p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
@@ -95,13 +93,11 @@ initial senders using the actor's current <code>sender</code> reference.
        to the journal. Can also be used for detecting duplicates, in special cases.</p></dd><dt class="param">processorId</dt><dd class="cmt"><p>Id of the event processor that stored (and emitted) this message.</p></dd><dt class="param">ack</dt><dd class="cmt"><p>Whether or not an <i>acknowledgement</i> should be written to the journal during
        (or after) delivery of this message by a <a name="org.eligosource.eventsourced.core.Channel" class="extype" href="Channel.html">Channel</a>.
        Used by event processors to indicate a series of output messages (that are derived
-       from a single input message). In this case, output messages 1 to n-1 should have set
-       <code>ack</code> to <code>false</code> and only output message n should have set <code>ack</code> to <code>true</code> (default).
+       from a single input message). In this case, output messages 1 to n-1 should have <code>ack</code>
+       set to <code>false</code> and only output message n should have <code>ack</code> set to <code>true</code> (default).
        If an acknowledgement has been written for a series, all messages of that series will
        be ignored by the corresponding channel during a replay, otherwise all of them will
-       be delivered again. Refer to <a name="org.eligosource.eventsourced.core.DefaultChannel" class="extype" href="DefaultChannel.html">DefaultChannel</a>
-       and <a name="org.eligosource.eventsourced.core.ReliableChannel" class="extype" href="ReliableChannel.html">ReliableChannel</a> for details when they
-       write acknowledgements.
+       be delivered again.
 </p></dd></dl></div>
     </li></ol>
             </div>
@@ -187,13 +183,11 @@ initial senders using the actor's current <code>sender</code> reference.
        (or after) delivery of this message by a <a name="org.eligosource.eventsourced.core.Channel" class="extype" href="Channel.html">Channel</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Whether or not an <i>acknowledgement</i> should be written to the journal during
        (or after) delivery of this message by a <a name="org.eligosource.eventsourced.core.Channel" class="extype" href="Channel.html">Channel</a>.
        Used by event processors to indicate a series of output messages (that are derived
-       from a single input message). In this case, output messages 1 to n-1 should have set
-       <code>ack</code> to <code>false</code> and only output message n should have set <code>ack</code> to <code>true</code> (default).
+       from a single input message). In this case, output messages 1 to n-1 should have <code>ack</code>
+       set to <code>false</code> and only output message n should have <code>ack</code> set to <code>true</code> (default).
        If an acknowledgement has been written for a series, all messages of that series will
        be ignored by the corresponding channel during a replay, otherwise all of them will
-       be delivered again. Refer to <a name="org.eligosource.eventsourced.core.DefaultChannel" class="extype" href="DefaultChannel.html">DefaultChannel</a>
-       and <a name="org.eligosource.eventsourced.core.ReliableChannel" class="extype" href="ReliableChannel.html">ReliableChannel</a> for details when they
-       write acknowledgements.
+       be delivered again.
 </p></div></div>
     </li><li visbl="pub" name="org.eligosource.eventsourced.core.Message#acks" data-isabs="false">
       <a id="acks:Seq[Int]"></a>
