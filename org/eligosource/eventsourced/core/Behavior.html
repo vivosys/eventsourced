@@ -2,20 +2,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>akka.actor.Behavior</title>
+          <title>org.eligosource.eventsourced.core.Behavior</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../lib/template.css" />
-      <script type="text/javascript" src="../../lib/jquery.js"></script>
-      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../lib/template.js"></script>
-      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
     
         </head>
         <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
-        <img src="../../lib/trait_big.png" />
-        <p id="owner"><a name="akka" class="extype" href="../package.html">akka</a>.<a name="akka.actor" class="extype" href="package.html">actor</a></p>
+        <img src="../../../../lib/trait_big.png" />
+        <p id="owner"><a name="org" class="extype" href="../../../package.html">org</a>.<a name="org.eligosource" class="extype" href="../../package.html">eligosource</a>.<a name="org.eligosource.eventsourced" class="extype" href="../package.html">eventsourced</a>.<a name="org.eligosource.eventsourced.core" class="extype" href="package.html">core</a></p>
         <h1>Behavior</h1>
       </div>
 
@@ -29,19 +29,18 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Allows actors with a stackable <a name="org.eligosource.eventsourced.core.Eventsourced" class="extype" href="../../org/eligosource/eventsourced/core/Eventsourced.html">Eventsourced</a>
-and/or <a name="org.eligosource.eventsourced.core.Receiver" class="extype" href="../../org/eligosource/eventsourced/core/Receiver.html">Receiver</a> modification (incl. sub-traits)
-to change their behavior with <code>context.become()</code> and <code>context.unbecome()</code> without
-loosing the functionality implemented by these modifications.
-</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a name="org.eligosource.eventsourced.core.Eventsourced" class="extype" href="../../org/eligosource/eventsourced/core/Eventsourced.html">Eventsourced</a>
-     <a name="org.eligosource.eventsourced.core.Receiver" class="extype" href="../../org/eligosource/eventsourced/core/Receiver.html">Receiver</a>
-     <a name="org.eligosource.eventsourced.core.Emitter" class="extype" href="../../org/eligosource/eventsourced/core/Emitter.html">Emitter</a>
-</p></span></dd></dl><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Allows actors with a stackable <a name="org.eligosource.eventsourced.core.Receiver" class="extype" href="Receiver.html">Receiver</a>,
+<a name="org.eligosource.eventsourced.core.Emitter" class="extype" href="Emitter.html">Emitter</a> and/or
+<a name="org.eligosource.eventsourced.core.Eventsourced" class="extype" href="Eventsourced.html">Eventsourced</a> modification to change their behavior
+with <code>become()</code> and <code>unbecome()</code> without loosing the functionality implemented by these
+traits.</p><p>On the other hand, actors that use <code>context.become()</code> to change their behavior will loose
+their <code>Receiver</code>, <code>Emitter</code> and/or <code>Eventsourced</code> functionality.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span name="akka.actor.Actor" class="extype">Actor</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a name="org.eligosource.eventsourced.core.Emitter" class="extype" href="../../org/eligosource/eventsourced/core/Emitter.html">Emitter</a>, <a name="org.eligosource.eventsourced.core.Eventsourced" class="extype" href="../../org/eligosource/eventsourced/core/Eventsourced.html">Eventsourced</a>, <a name="org.eligosource.eventsourced.core.Receiver" class="extype" href="../../org/eligosource/eventsourced/core/Receiver.html">Receiver</a></div>
+          <div class="subClasses hiddenContent"><a name="org.eligosource.eventsourced.core.Emitter" class="extype" href="Emitter.html">Emitter</a>, <a name="org.eligosource.eventsourced.core.Eventsourced" class="extype" href="Eventsourced.html">Eventsourced</a>, <a name="org.eligosource.eventsourced.core.Receiver" class="extype" href="Receiver.html">Receiver</a></div>
         </div></div>
     
 
@@ -55,7 +54,7 @@ loosing the functionality implemented by these modifications.
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="akka.actor.Behavior" class="in"><span>Behavior</span></li><li name="akka.actor.Actor" class="in"><span>Actor</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="org.eligosource.eventsourced.core.Behavior" class="in"><span>Behavior</span></li><li name="akka.actor.Actor" class="in"><span>Actor</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -160,6 +159,21 @@ loosing the functionality implemented by these modifications.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="org.eligosource.eventsourced.core.Behavior#become" data-isabs="false">
+      <a id="become(Receive,Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">become</span><span class="params">(<span name="behavior">behavior: Receive</span>, <span name="discardOld">discardOld: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Puts <code>behavior</code> on the hotswap stack.</p><div class="fullcomment"><div class="comment cmt"><p>Puts <code>behavior</code> on the hotswap stack. This will only affect the behavior of the actor
+that has been modified with this stackable trait.
+</p></div><dl class="paramcmts block"><dt class="param">behavior</dt><dd class="cmt"><p>new behavior</p></dd><dt class="param">discardOld</dt><dd class="cmt"><p>if <code>true</code>, an <code>unbecome()</code> will be issued prior to pushing <code>behavior</code>.
+</p></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -171,7 +185,7 @@ loosing the functionality implemented by these modifications.
         <span class="name">clone</span><span class="params">()</span><span class="result">: AnyRef</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -186,7 +200,7 @@ loosing the functionality implemented by these modifications.
         <span class="name">context</span><span class="result">: <span name="akka.actor.ActorContext" class="extype">ActorContext</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="akka" class="extype" href="../package.html">akka</a>] </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="akka" class="extype" href="../../../../akka/package.html">akka</a>] </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -222,7 +236,7 @@ loosing the functionality implemented by these modifications.
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -250,6 +264,18 @@ loosing the functionality implemented by these modifications.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="org.eligosource.eventsourced.core.Behavior#invoke" data-isabs="false">
+      <a id="invoke(Any):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">invoke</span><span class="params">(<span name="msg">msg: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -346,18 +372,18 @@ loosing the functionality implemented by these modifications.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
-    </li><li visbl="pub" name="akka.actor.Behavior#receive" data-isabs="false">
-      <a id="receive:PartialFunction[Any, Unit]"></a>
+    </li><li visbl="pub" name="org.eligosource.eventsourced.core.Behavior#receive" data-isabs="false">
+      <a id="receive:Receive"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">receive</span><span class="result">: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[<span name="scala.Any" class="extype">Any</span>, <span name="scala.Unit" class="extype">Unit</span>]</span>
+        <span class="name">receive</span><span class="result">: Receive</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="akka.actor.Behavior" class="extype" href="">Behavior</a> → Actor</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.eligosource.eventsourced.core.Behavior" class="extype" href="">Behavior</a> → Actor</dd></dl></div>
     </li><li visbl="pub" name="akka.actor.Actor#self" data-isabs="false">
       <a id="self:ActorRef"></a>
       <h4 class="signature">
@@ -418,6 +444,20 @@ loosing the functionality implemented by these modifications.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="org.eligosource.eventsourced.core.Behavior#unbecome" data-isabs="false">
+      <a id="unbecome():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unbecome</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reverts the behavior to the previous one on the hotswap stack.</p><div class="fullcomment"><div class="comment cmt"><p>Reverts the behavior to the previous one on the hotswap stack. This will only affect the
+behavior of the actor that has been modified with this stackable trait.
+</p></div></div>
     </li><li visbl="pub" name="akka.actor.Actor#unhandled" data-isabs="false">
       <a id="unhandled(Any):Unit"></a>
       <h4 class="signature">

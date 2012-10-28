@@ -25,7 +25,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Receiver</span><span class="result"> extends <a name="akka.actor.Behavior" class="extype" href="../../../../akka/actor/Behavior.html">Behavior</a></span>
+        <span class="name">Receiver</span><span class="result"> extends <a name="org.eligosource.eventsourced.core.Behavior" class="extype" href="Behavior.html">Behavior</a></span>
       </span>
       </h4>
       
@@ -61,7 +61,7 @@ library (such as <a name="org.eligosource.eventsourced.core.Confirm" class="exty
   }
 </pre></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="akka.actor.Behavior" class="extype" href="../../../../akka/actor/Behavior.html">Behavior</a>, <span name="akka.actor.Actor" class="extype">Actor</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="org.eligosource.eventsourced.core.Behavior" class="extype" href="Behavior.html">Behavior</a>, <span name="akka.actor.Actor" class="extype">Actor</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
           <div class="subClasses hiddenContent"><a name="org.eligosource.eventsourced.core.Emitter" class="extype" href="Emitter.html">Emitter</a></div>
@@ -78,7 +78,7 @@ library (such as <a name="org.eligosource.eventsourced.core.Confirm" class="exty
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="org.eligosource.eventsourced.core.Receiver" class="in"><span>Receiver</span></li><li name="akka.actor.Behavior" class="in"><span>Behavior</span></li><li name="akka.actor.Actor" class="in"><span>Actor</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="org.eligosource.eventsourced.core.Receiver" class="in"><span>Receiver</span></li><li name="org.eligosource.eventsourced.core.Behavior" class="in"><span>Behavior</span></li><li name="akka.actor.Actor" class="in"><span>Actor</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -183,6 +183,21 @@ library (such as <a name="org.eligosource.eventsourced.core.Confirm" class="exty
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="org.eligosource.eventsourced.core.Behavior#become" data-isabs="false">
+      <a id="become(Receive,Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">become</span><span class="params">(<span name="behavior">behavior: Receive</span>, <span name="discardOld">discardOld: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Puts <code>behavior</code> on the hotswap stack.</p><div class="fullcomment"><div class="comment cmt"><p>Puts <code>behavior</code> on the hotswap stack. This will only affect the behavior of the actor
+that has been modified with this stackable trait.
+</p></div><dl class="paramcmts block"><dt class="param">behavior</dt><dd class="cmt"><p>new behavior</p></dd><dt class="param">discardOld</dt><dd class="cmt"><p>if <code>true</code>, an <code>unbecome()</code> will be issued prior to pushing <code>behavior</code>.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.eligosource.eventsourced.core.Behavior" class="extype" href="Behavior.html">Behavior</a></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -289,6 +304,18 @@ is not of type <a name="org.eligosource.eventsourced.core.Message" class="extype
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="org.eligosource.eventsourced.core.Behavior#invoke" data-isabs="false">
+      <a id="invoke(Any):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">invoke</span><span class="params">(<span name="msg">msg: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.eligosource.eventsourced.core.Behavior" class="extype" href="Behavior.html">Behavior</a></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -426,7 +453,7 @@ is not of type <a name="org.eligosource.eventsourced.core.Message" class="extype
         <span class="name">receive</span><span class="result">: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[<span name="scala.Any" class="extype">Any</span>, <span name="scala.Unit" class="extype">Unit</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.eligosource.eventsourced.core.Receiver" class="extype" href="">Receiver</a> → <a name="akka.actor.Behavior" class="extype" href="../../../../akka/actor/Behavior.html">Behavior</a> → Actor</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.eligosource.eventsourced.core.Receiver" class="extype" href="">Receiver</a> → <a name="org.eligosource.eventsourced.core.Behavior" class="extype" href="Behavior.html">Behavior</a> → Actor</dd></dl></div>
     </li><li visbl="pub" name="akka.actor.Actor#self" data-isabs="false">
       <a id="self:ActorRef"></a>
       <h4 class="signature">
@@ -518,6 +545,20 @@ is not of type <a name="org.eligosource.eventsourced.core.Message" class="extype
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="org.eligosource.eventsourced.core.Behavior#unbecome" data-isabs="false">
+      <a id="unbecome():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unbecome</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reverts the behavior to the previous one on the hotswap stack.</p><div class="fullcomment"><div class="comment cmt"><p>Reverts the behavior to the previous one on the hotswap stack. This will only affect the
+behavior of the actor that has been modified with this stackable trait.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.eligosource.eventsourced.core.Behavior" class="extype" href="Behavior.html">Behavior</a></dd></dl></div>
     </li><li visbl="pub" name="akka.actor.Actor#unhandled" data-isabs="false">
       <a id="unhandled(Any):Unit"></a>
       <h4 class="signature">
@@ -582,8 +623,8 @@ is not of type <a name="org.eligosource.eventsourced.core.Message" class="extype
         </div>
 
         <div id="inheritedMembers">
-        <div name="akka.actor.Behavior" class="parent">
-              <h3>Inherited from <a name="akka.actor.Behavior" class="extype" href="../../../../akka/actor/Behavior.html">Behavior</a></h3>
+        <div name="org.eligosource.eventsourced.core.Behavior" class="parent">
+              <h3>Inherited from <a name="org.eligosource.eventsourced.core.Behavior" class="extype" href="Behavior.html">Behavior</a></h3>
             </div><div name="akka.actor.Actor" class="parent">
               <h3>Inherited from <span name="akka.actor.Actor" class="extype">Actor</span></h3>
             </div><div name="scala.AnyRef" class="parent">
