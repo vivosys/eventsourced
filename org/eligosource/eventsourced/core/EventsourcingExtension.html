@@ -421,7 +421,9 @@ Mapping key is the processor id.
       </h4>
       <p class="shortcomment cmt">Recovers selected processors and all channels registered at this extension by first
 calling <code>replay(f)</code> and then <code>deliver()</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Recovers selected processors and all channels registered at this extension by first
-calling <code>replay(f)</code> and then <code>deliver()</code>.
+calling <code>replay(f)</code> and then <code>deliver()</code>.</p><p>This method does not wait for replayed input messages being processed. However,
+any new message sent to any of the selected processors, after this method returned,
+is guaranteed to be processed after the replayed event messages.
 </p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>function called for each processor id. If the function returns <code>None</code>
        no message replay will be done for that processor. If it returns <code>Some(snr)</code>
        message replay will start from sequence number <code>snr</code> for that processor.
@@ -441,7 +443,9 @@ calling <code>replay(f)</code> and then <code>deliver()</code>.
 calling <code>replay(_ =&gt; Some(0))</code> and then <code>deliver()</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Recovers all processors and channels registered at this extension by first
 calling <code>replay(_ =&gt; Some(0))</code> and then <code>deliver()</code>. Replay is done with no
 lower bound (i.e. with all messages in the journal) for all processors of
-this context.
+this context.</p><p>This method does not wait for replayed input messages being processed. However,
+any new message sent to any of the processors, after this method returned, is
+guaranteed to be processed after the replayed event messages.
 </p></div></div>
     </li><li visbl="pub" name="org.eligosource.eventsourced.core.EventsourcingExtension#replay" data-isabs="false">
       <a id="replay((Int) ⇒ Option[Long]):Unit"></a>
@@ -454,7 +458,10 @@ this context.
         <span class="name">replay</span><span class="params">(<span name="f">f: (<span name="scala.Int" class="extype">Int</span>) ⇒ <span name="scala.Option" class="extype">Option</span>[<span name="scala.Long" class="extype">Long</span>]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Replays input messages to selected processors.</p><div class="fullcomment"><div class="comment cmt"><p>Replays input messages to selected processors.
+      <p class="shortcomment cmt">Replays input messages to selected processors.</p><div class="fullcomment"><div class="comment cmt"><p>Replays input messages to selected processors. This method does not wait for
+replayed input messages being processed. However, any new message sent to any
+of the selected processors, after this method returned, is guaranteed to be
+processed after the replayed event messages.
 </p></div><dl class="paramcmts block"><dt class="param">f</dt><dd class="cmt"><p>function called for each processor id. If the function returns <code>None</code>
        no message replay will be done for that processor. If it returns <code>Some(snr)</code>
        message replay will start from sequence number <code>snr</code> for that processor.
