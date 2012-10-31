@@ -155,6 +155,23 @@ event <a name="org.eligosource.eventsourced.core.Message" class="extype" href="M
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="org.eligosource.eventsourced.core.EventsourcingExtension#awaitProcessorCompletion" data-isabs="false">
+      <a id="awaitProcessorCompletion(Set[Int])(Timeout):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">awaitProcessorCompletion</span><span class="params">(<span name="processorIds">processorIds: Set[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="#processors:Map[Int, ActorRef]">processors.keySet</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="timeout">timeout: <span name="akka.util.Timeout" class="extype">Timeout</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Waits for selected processors to complete processing of all pending messages
+in their mailboxes.</p><div class="fullcomment"><div class="comment cmt"><p>Waits for selected processors to complete processing of all pending messages
+in their mailboxes.
+</p></div><dl class="paramcmts block"><dt class="param">processorIds</dt><dd class="cmt"><p>ids of registered processors to wait for. Default value
+       is the set of all registered processor ids.
+</p></dd></dl></div>
     </li><li visbl="pub" name="org.eligosource.eventsourced.core.EventsourcingExtension#channelOf" data-isabs="false">
       <a id="channelOf(ChannelProps)(ActorRefFactory):ActorRef"></a>
       <h4 class="signature">
