@@ -374,7 +374,7 @@ that has been modified with this stackable trait.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
-    </li><li visbl="pub" name="akka.actor.Actor#postStop" data-isabs="false">
+    </li><li visbl="pub" name="org.eligosource.eventsourced.core.Eventsourced#postStop" data-isabs="false">
       <a id="postStop():Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -385,7 +385,10 @@ that has been modified with this stackable trait.
         <span class="name">postStop</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+      <p class="shortcomment cmt">Calls <code>super.postStop</code> and then de-registers this processor from
+<a name="org.eligosource.eventsourced.core.EventsourcingExtension" class="extype" href="EventsourcingExtension.html">EventsourcingExtension</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Calls <code>super.postStop</code> and then de-registers this processor from
+<a name="org.eligosource.eventsourced.core.EventsourcingExtension" class="extype" href="EventsourcingExtension.html">EventsourcingExtension</a>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="org.eligosource.eventsourced.core.Eventsourced" class="extype" href="">Eventsourced</a> → Actor</dd></dl></div>
     </li><li visbl="pub" name="akka.actor.Actor#preRestart" data-isabs="false">
       <a id="preRestart(Throwable,Option[Any]):Unit"></a>
       <h4 class="signature">
