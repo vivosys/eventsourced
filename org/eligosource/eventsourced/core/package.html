@@ -226,6 +226,19 @@ to <code>destination</code>.</p>
       </h4>
       <p class="comment cmt">Makes event <a href="Message.html" class="extype" name="org.eligosource.eventsourced.core.Message">org.eligosource.eventsourced.core.Message</a> receivers idempotent
 based on message sequence number.</p>
+    </li><li name="org.eligosource.eventsourced.core.Journal" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="JournalextendsActor"></a>
+      <a id="Journal:Journal"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Journal.html"><span class="name">Journal</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">An abstract journal to be implemented by journal providers.</p>
     </li><li name="org.eligosource.eventsourced.core.Message" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MessageextendsProductwithSerializable"></a>
       <a id="Message:Message"></a>
@@ -383,6 +396,19 @@ actor's <code>receive</code> method with that <code>event</code>.</p>
       </span>
       </h4>
       <p class="comment cmt">Event-sourcing extension access point.</p>
+    </li><li name="org.eligosource.eventsourced.core.Journal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Journal"></a>
+      <a id="Journal:Journal"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Journal$.html"><span class="name">Journal</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Defines message types that can be processed by a <a href="Journal.html" class="extype" name="org.eligosource.eventsourced.core.Journal">org.eligosource.eventsourced.core.Journal</a>.</p>
     </li><li name="org.eligosource.eventsourced.core.RedeliveryPolicy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="RedeliveryPolicy"></a>
       <a id="RedeliveryPolicy:RedeliveryPolicy"></a>
