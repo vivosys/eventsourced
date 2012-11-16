@@ -46,8 +46,10 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A channel keeps track of successfully delivered event <a href="Message.html" class="extype" name="org.eligosource.eventsourced.core.Message">org.eligosource.eventsourced.core.Message</a>s.
 Channels are used by <a href="Eventsourced.html" class="extype" name="org.eligosource.eventsourced.core.Eventsourced">org.eligosource.eventsourced.core.Eventsourced</a> actors to prevent redundant
-message delivery to destinations during event message replay.</p><p>Channels need not be used by <code>Eventsourced</code> actors if the event message destination was received via
-a sender reference. Sender references are always the <code>deadLetters</code> reference during a replay.
+message delivery to destinations during event message replay.</p><p>A less reliable alternative to channels is communication via sender references. Event messages that
+are sent to processors during a replay always have a <code>deadLetters</code> sender reference which prevents
+redundant delivery as well. The main difference is that the delivery guarantee changes from
+<i>at-least-once</i> to <i>at-most-once</i>.
 </p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="DefaultChannel.html" class="extype" name="org.eligosource.eventsourced.core.DefaultChannel">org.eligosource.eventsourced.core.DefaultChannel</a>
      <a href="ReliableChannel.html" class="extype" name="org.eligosource.eventsourced.core.ReliableChannel">org.eligosource.eventsourced.core.ReliableChannel</a>
      <a href="Message.html" class="extype" name="org.eligosource.eventsourced.core.Message">org.eligosource.eventsourced.core.Message</a>
