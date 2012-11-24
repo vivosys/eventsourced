@@ -4,7 +4,7 @@ import com.typesafe.sbt.osgi.SbtOsgi.{ OsgiKeys, osgiSettings, defaultOsgiSettin
 
 object Settings {
   val buildOrganization = "org.eligosource"
-  val buildVersion      = "0.5-SNAPSHOT"
+  val buildVersion      = "0.5.0.vivo_2"
   val buildScalaVersion = Version.Scala
   val buildSettings = Defaults.defaultSettings ++ Seq(
     organization := buildOrganization,
@@ -62,12 +62,9 @@ object Dependency {
 object Publish {
   val nexus = "http://repo.eligotech.com/nexus/content/repositories/"
   val publishSettings = Seq(
-    credentials += Credentials(Path.userHome / ".sbt" / ".credentials"),
+    credentials += Credentials(Path.userHome / ".ivy2" / ".credentials"),
     publishMavenStyle := true,
-    publishTo <<= (version) { (v: String) =>
-        if (v.trim.endsWith("SNAPSHOT")) Some("snapshots" at nexus + "eligosource-snapshots")
-        else                             Some("releases"  at nexus + "eligosource-releases")
-    }
+    publishTo := Some("VIVO Systems Artifactory" at "https://tools.vivosys.com/artifactory/ext-release-local")
   )
 }
 
