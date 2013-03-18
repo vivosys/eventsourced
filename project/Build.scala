@@ -4,13 +4,13 @@ import com.typesafe.sbt.osgi.SbtOsgi.{ OsgiKeys, osgiSettings, defaultOsgiSettin
 
 object Settings {
   val buildOrganization = "org.eligosource"
-  val buildVersion      = "0.5.0.vivo_2"
+  val buildVersion      = "0.5.0.vivo_3"
   val buildScalaVersion = Version.Scala
   val buildSettings = Defaults.defaultSettings ++ Seq(
     organization := buildOrganization,
     version      := buildVersion,
     scalaVersion := buildScalaVersion,
-    scalaBinaryVersion <<= scalaVersion.identity
+    scalaBinaryVersion := "2.10"
   )
 
   import Resolvers._
@@ -33,8 +33,8 @@ object Dependencies {
 }
 
 object Version {
-  val Scala = "2.10.0-RC2"
-  val Akka  = "2.1.0-RC2"
+  val Scala = "2.10.0"
+  val Akka  = "2.1.1"
 }
 
 object Dependency {
@@ -45,7 +45,7 @@ object Dependency {
   // -----------------------------------------------
 
   val protobuf    = "com.google.protobuf"       %  "protobuf-java"  % "2.4.1" % "compile"
-  val akkaActor   = "com.typesafe.akka"         %% "akka-actor"     % Akka    % "compile"
+  val akkaActor   = "com.typesafe.akka"         %  "akka-actor_2.10"     % Akka    % "compile"
   val commonsIo   = "commons-io"                %  "commons-io"     % "2.3"   % "compile"
   val journalIo   = "journalio"                 %  "journalio"      % "1.2"   % "compile"
   val levelDbJni  = "org.fusesource.leveldbjni" %  "leveldbjni-all" % "1.4.1" % "compile"
@@ -54,9 +54,9 @@ object Dependency {
   //  Test
   // -----------------------------------------------
 
-  val akkaCluster = "com.typesafe.akka" %% "akka-cluster-experimental" % Akka  % "test"
+  val akkaCluster = "com.typesafe.akka" % "akka-cluster-experimental_2.10" % Akka  % "test"
   val scalaActors = "org.scala-lang"    %  "scala-actors"              % Scala % "test"
-  val scalaTest   = "org.scalatest"     %% "scalatest"                 % "1.8" % "test"
+  val scalaTest   = "org.scalatest"     %% "scalatest"                 % "1.9.1" % "test"
 }
 
 object Publish {
